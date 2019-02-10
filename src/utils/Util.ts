@@ -1,4 +1,4 @@
-export default class Hashtag {
+export default class Util {
     public static getCreepNames() {
         return Game.creeps;
 
@@ -12,5 +12,5 @@ export default class Hashtag {
 
     public static getCreepByName(creepName: string) {
         return Game.creeps[creepName];
-    }
-}
+    };
+};

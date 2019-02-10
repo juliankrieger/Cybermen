@@ -1,4 +1,7 @@
+import Cyberbrain from "Cyberbrain";
 import { ErrorMapper } from "utils/ErrorMapper";
+import "utils/Util";
+import Util from "utils/Util";
 
 
 // When compiling TS to JS and bundling with rollup, the line numbers and file names in error messages change
@@ -12,8 +15,12 @@ import { ErrorMapper } from "utils/ErrorMapper";
 
 // export const logger = log4js.getLogger("default");
 
+const InitCyberbrain = new Cyberbrain();
+
 export const loop = ErrorMapper.wrapLoop(() => {
   console.log(`Current game tick is ${Game.time}`);
+
+  InitCyberbrain.nextMove();
 
   // Automatically delete memory of missing creeps
   for (const name in Memory.creeps) {
