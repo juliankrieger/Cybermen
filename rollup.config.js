@@ -22,11 +22,22 @@ export default {
     sourcemap: true
   },
 
+  external: [
+    "fs"
+  ],
+
   plugins: [
-    clear({ targets: ["dist"] }),
+    clear({
+      targets: ["dist"]
+    }),
     resolve(),
     commonjs(),
-    typescript({tsconfig: "./tsconfig.json"}),
-    screeps({config: cfg, dryRun: cfg == null})
+    typescript({
+      tsconfig: "./tsconfig.json"
+    }),
+    screeps({
+      config: cfg,
+      dryRun: cfg == null
+    })
   ]
 }
