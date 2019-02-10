@@ -58,6 +58,7 @@
     "typescript": "^2.9.2"
   },
   "dependencies": {
+    "log4js": "^4.0.2",
     "source-map": "~0.6.1"
   }
 }
