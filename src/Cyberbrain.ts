@@ -10,5 +10,6 @@ export default class Cyberbrain implements Cyberbrain {
      */
     public nextMove() {
         this.SpawnController.nextMove();
+        this.CreepController.nextMove();
     }
 }

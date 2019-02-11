@@ -18,7 +18,7 @@ import Util from "utils/Util";
 const InitCyberbrain = new Cyberbrain();
 
 export const loop = ErrorMapper.wrapLoop(() => {
-  console.log(`Current game tick is ${Game.time}`);
+  // console.log(`Current game tick is ${Game.time}`);
 
   InitCyberbrain.nextMove();
 
